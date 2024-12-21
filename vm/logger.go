@@ -1,8 +1,8 @@
 package vm
 
 import (
-	"github.com/jeffcail/echoframe/utils"
-	"github.com/jeffcail/gtools"
+	"github.com/mazezen/echoframe/utils"
+	"github.com/mazezen/itools"
 	"go.uber.org/zap"
 )
 
@@ -11,7 +11,7 @@ func newLogger(t int) *zap.Logger {
 	if err != nil {
 		panic(err)
 	}
-	m := gtools.Gm.Get("logger").(map[string]interface{})
+	m := itools.Gm.Get("logger").(map[string]interface{})
 	var (
 		p  string
 		ok bool
@@ -29,7 +29,7 @@ func newLogger(t int) *zap.Logger {
 		}
 	}
 
-	p = gtools.CompactStr(pr, p)
+	p = itools.CompactStr(pr, p)
 
 	mx, ok := m["max"].(int)
 	if !ok {
@@ -48,5 +48,5 @@ func newLogger(t int) *zap.Logger {
 	if !ok {
 		panic(ok)
 	}
-	return gtools.NewLogger(p, mx, li, lo, co)
+	return itools.NewLogger(p, mx, li, lo, co)
 }

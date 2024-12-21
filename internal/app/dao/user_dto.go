@@ -2,8 +2,8 @@ package dto
 
 import (
 	"errors"
-	"github.com/jeffcail/echoframe/internal/models"
-	"github.com/jeffcail/echoframe/vm"
+	"github.com/mazezen/echoframe/internal/models"
+	"github.com/mazezen/echoframe/vm"
 )
 
 type UserDto struct{}

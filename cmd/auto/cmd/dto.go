@@ -1,13 +1,13 @@
 /*
-Copyright © 2024 NAME jeffcail
+Copyright © 2024 NAME mazezen
 */
 package cmd
 
 import (
 	"fmt"
-	"github.com/jeffcail/echoframe/cmd/auto/do"
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
-	"github.com/jeffcail/gtools"
+	"github.com/mazezen/echoframe/cmd/auto/do"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
+	"github.com/mazezen/itools"
 	"html/template"
 	"log"
 	"os"
@@ -54,7 +54,7 @@ func runDaoCode() {
 	checkModel(models)
 	var ms []dt.ModelInfo
 	for _, model := range models {
-		strDto := gtools.CompactStr(rootDir, df, strings.ToLower(model.Name), "_", "dto.go")
+		strDto := itools.CompactStr(rootDir, df, strings.ToLower(model.Name), "_", "dto.go")
 		if _, err := os.Stat(strDto); os.IsNotExist(err) {
 			ms = append(ms, model)
 		}
@@ -80,7 +80,7 @@ func generateDaoCode(models []dt.ModelInfo, dtoTemplate string) error {
 		return err
 	}
 
-	sd := gtools.CompactStr(rootDir, df)
+	sd := itools.CompactStr(rootDir, df)
 	for _, model := range models {
 		_, err = os.Stat(sd)
 		if os.IsNotExist(err) {

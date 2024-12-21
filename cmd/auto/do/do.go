@@ -1,7 +1,7 @@
 package do
 
 import (
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
 	"html/template"
 	"log"
 	"os"

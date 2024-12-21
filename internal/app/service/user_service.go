@@ -1,8 +1,7 @@
 package service
 
 import (
-	"github.com/jeffcail/echoframe/internal/app/dao"
-	"github.com/jeffcail/echoframe/internal/models"
+	"github.com/mazezen/echoframe/internal/models"
 )
 
 type UserService struct{}

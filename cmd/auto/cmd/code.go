@@ -1,14 +1,14 @@
 /*
-Copyright © 2024 NAME jeffcail
+Copyright © 2024 NAME mazezen
 */
 package cmd
 
 import (
 	"fmt"
-	"github.com/jeffcail/echoframe/cmd/auto/do"
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
-	"github.com/jeffcail/echoframe/utils"
-	"github.com/jeffcail/gtools"
+	"github.com/mazezen/echoframe/cmd/auto/do"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
+	"github.com/mazezen/echoframe/utils"
+	"github.com/mazezen/itools"
 	"github.com/spf13/cobra"
 	"html/template"
 	"log"
@@ -54,15 +54,15 @@ func runCode() {
 	checkModel(models)
 	var ms []dt.ModelInfo
 	for _, model := range models {
-		strHandler := gtools.CompactStr(rootDir, hf, strings.ToLower(model.Name), "_", "handler.go")
+		strHandler := itools.CompactStr(rootDir, hf, strings.ToLower(model.Name), "_", "handler.go")
 		if _, err := os.Stat(strHandler); os.IsNotExist(err) {
 			ms = append(ms, model)
 		}
-		strService := gtools.CompactStr(rootDir, sf, strings.ToLower(model.Name), "_", "service.go")
+		strService := itools.CompactStr(rootDir, sf, strings.ToLower(model.Name), "_", "service.go")
 		if _, err := os.Stat(strService); os.IsNotExist(err) {
 			ms = append(ms, model)
 		}
-		strDto := gtools.CompactStr(rootDir, df, strings.ToLower(model.Name), "_", "dto.go")
+		strDto := itools.CompactStr(rootDir, df, strings.ToLower(model.Name), "_", "dto.go")
 		if _, err := os.Stat(strDto); os.IsNotExist(err) {
 			ms = append(ms, model)
 		}
@@ -90,9 +90,9 @@ func generateCode(models []dt.ModelInfo, handlerTemplate, serviceTemplate, dtoTe
 		return err
 	}
 
-	hd := gtools.CompactStr(rootDir, hf)
-	sd := gtools.CompactStr(rootDir, sf)
-	dd := gtools.CompactStr(rootDir, df)
+	hd := itools.CompactStr(rootDir, hf)
+	sd := itools.CompactStr(rootDir, sf)
+	dd := itools.CompactStr(rootDir, df)
 	var (
 		handlerFileName string
 		serviceFileName string

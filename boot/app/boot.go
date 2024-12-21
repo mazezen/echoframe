@@ -2,10 +2,9 @@ package app
 
 import (
 	"flag"
-	"github.com/jeffcail/echoframe/internal/app/router"
-	"github.com/jeffcail/echoframe/vm"
-	"github.com/jeffcail/gtools"
-	"github.com/labstack/echo/v4"
+	"github.com/mazezen/echoframe/internal/app/router"
+	"github.com/mazezen/echoframe/vm"
+	"github.com/mazezen/itools"
 )
 
 type App struct {
@@ -24,9 +23,9 @@ func NewApp() *App {
 	ap := new(App)
 	if ap.c == nil {
 		ap.c = echo.New()
-		gtools.LoadConfig(cf)
+		itools.LoadConfig(cf)
 	}
-	val := gtools.Gm.Get("port")
+	val := itools.Gm.Get("port")
 	if val.(string) == "" {
 		ap.port = ":8090"
 	}

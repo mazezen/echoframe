@@ -1,6 +1,6 @@
 ### <p align="center">EchoFrame</p>
 #### <p align="center">基于echo框架,搭建一个便捷的脚手架</p>
-#### <p align="center"><a href="https://github.com/jeffcail/cgncode/releases"><img src="https://img.shields.io/github/release/cgncode/releases.svg" alt="GitHub release"></a><a href="https://github.com/jeffcail/cgncode/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license"></a><p>
+#### <p align="center"><a href="https://github.com/mazezen/cgncode/releases"><img src="https://img.shields.io/github/release/cgncode/releases.svg" alt="GitHub release"></a><a href="https://github.com/mazezen/cgncode/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license"></a><p>
 #### <p align="center"><a href="./README.md" target="_blank">简体中文</a> | <a href="./README_en.md" target="_blank">English</a> </p>
 
 # EchoFrame

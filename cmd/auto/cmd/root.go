@@ -1,12 +1,12 @@
 /*
-Copyright © 2024 NAME jeffcail
+Copyright © 2024 NAME mazezen
 */
 package cmd
 
 import (
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
-	"github.com/jeffcail/echoframe/cmd/auto/utils"
-	"github.com/jeffcail/echoframe/vm"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
+	"github.com/mazezen/echoframe/cmd/auto/utils"
+	"github.com/mazezen/echoframe/vm"
 	"os"
 
 	"github.com/spf13/cobra"

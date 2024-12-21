@@ -2,9 +2,8 @@ package utils
 
 import (
 	"fmt"
+	"gorm.io/gorm/utils"
 	"testing"
-
-	"github.com/echoframe/utils"
 )
 
 func TestAesBase64Encrypt(t *testing.T) {

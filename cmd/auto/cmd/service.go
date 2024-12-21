@@ -1,13 +1,13 @@
 /*
-Copyright © 2024 NAME jeffcail
+Copyright © 2024 NAME mazezen
 */
 package cmd
 
 import (
 	"fmt"
-	"github.com/jeffcail/echoframe/cmd/auto/do"
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
-	"github.com/jeffcail/gtools"
+	"github.com/mazezen/echoframe/cmd/auto/do"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
+	"github.com/mazezen/itools"
 	"github.com/spf13/cobra"
 	"html/template"
 	"log"
@@ -53,7 +53,7 @@ func runServiceCode() {
 	checkModel(models)
 	var ms []dt.ModelInfo
 	for _, model := range models {
-		strService := gtools.CompactStr(rootDir, sf, strings.ToLower(model.Name), "_", "service.go")
+		strService := itools.CompactStr(rootDir, sf, strings.ToLower(model.Name), "_", "service.go")
 		if _, err := os.Stat(strService); os.IsNotExist(err) {
 			ms = append(ms, model)
 		}
@@ -79,7 +79,7 @@ func generateServiceCode(models []dt.ModelInfo, serviceTemplate string) error {
 		return err
 	}
 
-	sd := gtools.CompactStr(rootDir, sf)
+	sd := itools.CompactStr(rootDir, sf)
 	for _, model := range models {
 		_, err = os.Stat(sd)
 		if os.IsNotExist(err) {

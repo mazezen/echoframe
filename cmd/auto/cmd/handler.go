@@ -1,13 +1,13 @@
 /*
-Copyright © 2024 NAME jeffcail
+Copyright © 2024 NAME mazezen
 */
 package cmd
 
 import (
 	"fmt"
-	"github.com/jeffcail/echoframe/cmd/auto/do"
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
-	"github.com/jeffcail/gtools"
+	"github.com/mazezen/echoframe/cmd/auto/do"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
+	"github.com/mazezen/itools"
 	"github.com/spf13/cobra"
 	"html/template"
 	"log"
@@ -52,7 +52,7 @@ func runHandlerCode() {
 	checkModel(models)
 	var ms []dt.ModelInfo
 	for _, model := range models {
-		strHandler := gtools.CompactStr(rootDir, hf, strings.ToLower(model.Name), "_", "handler.go")
+		strHandler := itools.CompactStr(rootDir, hf, strings.ToLower(model.Name), "_", "handler.go")
 		if _, err := os.Stat(strHandler); os.IsNotExist(err) {
 			ms = append(ms, model)
 		}
@@ -77,7 +77,7 @@ func generateHandlerCode(models []dt.ModelInfo, handlerTemplate string) error {
 	if err != nil {
 		return err
 	}
-	hd := gtools.CompactStr(rootDir, hf)
+	hd := itools.CompactStr(rootDir, hf)
 	for _, model := range models {
 		_, err = os.Stat(hd)
 		if os.IsNotExist(err) {

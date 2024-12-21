@@ -13,6 +13,7 @@ func FindProjectRoot() (string, error) {
 	}
 
 	for {
+
 		if _, err := os.Stat(filepath.Join(currentDir, "go.mod")); err == nil {
 			return currentDir, nil
 		}

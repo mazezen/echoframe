@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/jeffcail/echoframe/cmd/auto/dt"
+	"github.com/mazezen/echoframe/cmd/auto/dt"
 	"go/ast"
 	"go/parser"
 	"go/token"

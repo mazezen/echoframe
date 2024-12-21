@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/jeffcail/echoframe/boot/app"
+	"github.com/mazezen/echoframe/boot/app"
 )
 
 func main() {

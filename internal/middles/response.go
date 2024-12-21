@@ -1,8 +1,7 @@
 package middles
 
 import (
-	"github.com/jeffcail/gtools"
-	"github.com/labstack/echo/v4"
+	"github.com/mazezen/itools"
 	"github.com/spf13/cast"
 	"net/http"
 )
@@ -11,8 +10,8 @@ import (
 type defaultHandlerFunc func(c echo.Context)
 
 var (
-	res = &gtools.Response
-	rl  = &gtools.ResponsePage
+	res = &itools.Response
+	rl  = &itools.ResponsePage
 )
 
 // HandlerMiddleware Handling error and success response formats in controllers

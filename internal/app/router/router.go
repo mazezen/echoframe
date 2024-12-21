@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/jeffcail/echoframe/internal/app/middlewares"
 	"github.com/labstack/echo/v4"
+	"github.com/mazezen/echoframe/internal/app/middlewares"
 	"time"
 
 	"github.com/labstack/echo/v4/middleware"

@@ -2,9 +2,9 @@ package middlewares
 
 import (
 	"github.com/google/uuid"
-	"github.com/jeffcail/echoframe/vm"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/mazezen/echoframe/vm"
 	"go.uber.org/zap"
 	"runtime"
 	"strings"
